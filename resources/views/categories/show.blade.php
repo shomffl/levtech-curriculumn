@@ -14,6 +14,7 @@
         
         <div class="footer">
             <a href="/categories">戻る</a>
+            <p class="edit">[<a href="/categories/{{ $category->id }}/edit">edit</a>]</p>
         </div>
     </body>
 </html>

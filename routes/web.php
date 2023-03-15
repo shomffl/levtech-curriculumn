@@ -18,8 +18,12 @@ Route::get('/', [PostController::class, 'index']);
 Route::get('/posts/create', [PostController::class, 'create']);
 Route::get('/posts/{post}', [PostController::class, 'show']);
 Route::post('/posts', [PostController::class, 'store']);
+Route::get('/posts/{post}/edit', [PostController::class, 'edit']);
+Route::put('/posts/{post}', [PostController::class, 'update']);
 
 Route::get('/categories', [CategoryController::class, 'index']);
 Route::get('/categories/create', [CategoryController::class, 'create']);
 Route::get('/categories/{category}', [CategoryController::class ,'show']);
 Route::post('/categories', [CategoryController::class, 'store']);
+Route::get('/categories/{category}/edit', [CategoryController::class, 'edit']);
+Route::put('/categories/{category}', [CategoryController::class, 'update']);
