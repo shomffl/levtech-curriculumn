@@ -9,9 +9,10 @@
     <body>
         <h1>Category Name</h1>
         @foreach($categories as $category)
-            <h2>{{$category->name}}</h2>
+            <h2>
+                <a href="/categories/{{ $category->id }}">{{ $category->name }}</a>
+            </h2>        
         @endforeach
-        
         <div class='paginate'>
             {{ $categories->links() }}
         </div>
