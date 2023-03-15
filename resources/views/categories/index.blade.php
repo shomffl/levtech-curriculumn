@@ -8,6 +8,8 @@
     </head>
     <body>
         <h1>Category Name</h1>
+        <a href='/categories/create'>create</a>
+
         @foreach($categories as $category)
             <h2>
                 <a href="/categories/{{ $category->id }}">{{ $category->name }}</a>
