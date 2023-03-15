@@ -11,4 +11,9 @@ class CategoryController extends Controller
     {
         return view('categories/index')->with(['categories' => $category->getPaginateByLimit()]);
     }
+    
+    public function show(Category $category)
+    {
+        return view('categories/show')->with(['category' => $category]);
+    }
 }
