@@ -29,4 +29,16 @@ class CategoryController extends Controller
         $category->fill($input)->save();
         return redirect('/categories/' . $category->id);
     }
+    
+    public function edit(Category $category)
+    {
+        return view('categories/edit')->with(['category' => $category]);
+    }
+    
+    public function update(CategoryRequest $request, Category $category)
+    {
+        $input= $request['category'];
+        $category->fill($input)->save();
+        return redirect('/categories/' . $category->id);
+    }
 }
